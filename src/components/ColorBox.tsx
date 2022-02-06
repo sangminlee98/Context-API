@@ -4,7 +4,7 @@ import { ColorConsumer, State } from '../contexts/color';
 const ColorBox = () => {
   return (
     <ColorConsumer>
-      {({state, actions}: State) => (
+      {({state}: State) => (
         <>
           <div
             style={{
@@ -18,7 +18,6 @@ const ColorBox = () => {
               height: '32px',
               background: state.subcolor
             }}
-            onClick={() => actions.setSubcolor('blue')}
           />
         </>
       )}
